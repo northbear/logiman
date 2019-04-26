@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.6)
+project (logiman)
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+add_executable(logiman src/logiman.c)
+target_link_libraries(logiman ${CURSES_LIBRARIES})
